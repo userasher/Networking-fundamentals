@@ -95,6 +95,75 @@ How this will be done ?
     10.0.0.0/8 ===> formula ===> 32 - 8 = 24 ====>no. of IP add. = 2^24
 
 
+    Chapter 1 learnings: 
+    ip address
+    CIDR calculations
+    about ports
+    subnets
+    VPC
+
+
+    CHAPTER 2: 
+
+    OSI MODEL (open systems interconnection): 
+    
+    1)helps us to understand the journey of data across the internet
+    2)OSI model explains entire thing in 7 layers.
+
+    Even before request is intiated for a particular data from a particular server:
+    2 things take place in prior:
+    
+    ---> DNS resolution
+    --->TCP handshaking
+
+    step1: if the DNS resolution happens then next step is TCP handshake
+
+    step 2: After TCP handshake/3 way handshake data request intiation starts
+
+    Now whatever happens is the part of the OSI model(assuming that DNS resolution and TCP hadnshake is successful)
+
+    layer 7 of OSI model: here our browser intiates an http or https request also called as APPLICATION layer.
+    
+    layer 6 of OSI model: now after request intiation beacuse data security is necessary data is encrypted.
+    (also called as data formatting) this layer is callled PRESENTATION layer.
+
+    layer 5 of OSI model: session is created and maintained by the browser so that server doesnt have to authenticate 
+    user multiple times in a small period of time. is called as SESSION layer.
+
+    imp note: all these 3 layers and maintained and done in the browser itself 
+
+    layer 4 of OSI model: data sent or received by the user is segmented and along with 
+    it in this layer a protocol is defined TCP/UDP .
+    The data to be transmitted is 1st segmented and sent to server according to the TCP/UDP protocol
+    layer is called as TRANSPORT layer
+
+    Now since everything is ready its time to send the data
+
+    layer 3 of OSI model: now before sending the data this segmented data is received by the router and data is converted to packets.
+    packets are segments of data which contains info. about their source and destination IP address and the pattern in which 
+    they should be arranged to get complete data they arrive at destination
+    after data is transmitted by our router it will hop through many router before it reaches destination and it will take
+    shortest network of router depending on destination  IP address
+    This is called as NETWORKING layer
+
+    layer 2 of OSI model: data link layer
+
+    layer 1 of OSI model:finally this the physical layer consisting of fibre optic cables and data is converted to 
+    electronic signals and transmitted very fast
+
+
+    
+    
+    
+    
+
+    
+    
+
+    
+    
+
+
 
 
 

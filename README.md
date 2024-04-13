@@ -151,6 +151,71 @@ How this will be done ?
     layer 1 of OSI model:finally this the physical layer consisting of fibre optic cables and data is converted to 
     electronic signals and transmitted very fast
 
+   CHAPTER 3: VPC
+
+   outside internet --> Internet gateway --> public subnet --> LOAD BALANCER --> route tables --> security groups --> private subnets --> application in orivate subnet 
+
+
+   public subnet is the one which can be accessed by the users outside the VPC only when they have passed through the internet
+   gateway which is like the 1st gateway of the VPC.
+
+
+   what is NAT gateways?
+   --> it is a bad practise if you expose your applications IP addresses to open internet if your application resides in a private subnet inside a VPC.
+
+   ✅In aws security is shared responsibility
+   
+   ✅When we add the security at an instance level we make use of SECURITY GROUP.
+   
+   ✅when we add security at the subnet level in which that ec2 instnace is present we make use of NACL.
+   
+   ✅LAST point before reaching the actual application the security is served by the security group/NACL.
+
+
+   Primary difference between security group and NACL:
+
+   SECURITY GROUP configuration is doen to allow traffic to instance from the 
+   outside world 
+   
+   In security group :
+   --->inbound traffic (traffic flowing into the application )
+   
+   --->outbound traffic (traffic flowing outside the application)
+
+   ✅Both inbound and outbound traffic can be managed as part of the scurity group
+   
+   ✅By default when you create an EC2 instance on aws it assigns you a security group by default.
+   
+   ✅and it is configured to allow all outbound traffic by default
+   
+   ✅it deny entry to all inbound traffic by default
+   
+   ✅by deafult AWS blocks outbound traffic for port 25(mailing service) of your instance which is rare thing since it all other outbound traffic.
+
+
+   What is NACL?
+   
+   ✅network access control list
+   
+   ✅through NACL AWS gives us power to deny certain traffic at the private subnet level.
+
+   ✅even if instance owners by mistake allows all inbound traffic hten NACL comes to help as we can define which 
+   type of inbound traffic to deny and save from any hacking of the instance or the whole private subnet.
+
+   ✅since NACL applied at subnet level which is one level upper than security group level so 
+   it saves the whole subnet.
+
+   ✅imp:  if any thing defined at the subnet level by default it is applied to all the instances in that 
+   particular subnet.
+
+   
+
+   
+
+   
+
+   
+
 
     
     

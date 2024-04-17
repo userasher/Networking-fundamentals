@@ -208,6 +208,9 @@ How this will be done ?
    ✅imp:  if any thing defined at the subnet level by default it is applied to all the instances in that 
    particular subnet.
 
+   I have documented all this from a Abhishek veermala's video from his youtibe channel
+   link to the video: https://www.youtube.com/watch?v=iSOfkw_YyOU&list=PLdpzxOOAlwvKv4MFW35XRskZbQbrt6ep-&index=3
+
    
 
    
